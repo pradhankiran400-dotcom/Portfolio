@@ -1,0 +1,683 @@
+/* Custom Styling for Kiran Kumar Pradhan's Portfolio */
+
+/* Import Google Fonts fallback if CDN loads slow */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap');
+
+/* Pattachitra Border-image classes */
+.pattachitra-border {
+  border: 12px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23FAF6F0'/%3E%3Cpath d='M0 0 L12 12 L0 24 M24 0 L12 12 L24 24' stroke='%238B2612' stroke-width='2' fill='none'/%3E%3Ccircle cx='12' cy='12' r='3.5' fill='%238B2612'/%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%23FAF6F0'/%3E%3Cpath d='M6 0v24M18 0v24' stroke='%238B2612' stroke-width='0.5' stroke-dasharray='1 1'/%3E%3C/svg%3E") 12 repeat;
+}
+
+.pattachitra-border-thin {
+  border: 8px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23FAF6F0'/%3E%3Cpath d='M0 8h16M8 0v16' stroke='%238B2612' stroke-width='0.75'/%3E%3Cpolygon points='8,2 14,8 8,14 2,8' stroke='%238B2612' stroke-width='1.25' fill='none'/%3E%3Ccircle cx='8' cy='8' r='2' fill='%238B2612'/%3E%3Ccircle cx='8' cy='8' r='0.75' fill='%23FAF6F0'/%3E%3C/svg%3E") 8 repeat;
+}
+
+/* Custom Scrollbar styled after temple terracotta */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2B2724;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B2612;
+  border: 2px solid #2B2724;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Smooth Fade transition for elements */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  visibility: hidden;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Nav Link Underline - Odissi Dance Curving Underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='6' viewBox='0 0 100 6'%3E%3Cpath d='M0 5 Q 50 1 100 5' stroke='%23D4AF37' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Special Button Hover Effect - Fluid Odissi Glow & Tribhanga outline */
+.nav-link-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-link-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.1, 0.8, 0.3, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nav-link-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Project Cards Hover details */
+.link-arrow-hover svg {
+  transition: transform 0.3s ease;
+}
+
+.link-arrow-hover:hover svg {
+  transform: translateX(4px);
+}
+
+/* Skill Badge Fluid Animation */
+.skill-badge {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.skill-badge:hover {
+  background-color: #8B2612;
+  color: #FAF6F0;
+  border-color: #D4AF37;
+  box-shadow: 0 10px 15px -3px rgba(139, 38, 18, 0.3);
+}
+
+/* Social Buttons slide animations */
+.social-btn {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  z-index: 1;
+}
+
+.social-btn:hover {
+  box-shadow: 0 10px 20px rgba(139, 38, 18, 0.4);
+}
+
+/* Konark Loader Spinner Slow spinning */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Sudarshan Chakra Spin (Slow to Speed) with Great Lighting */
+@keyframes sudarshan-spin {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4)) drop-shadow(0 0 20px rgba(139, 38, 18, 0.3));
+  }
+
+  15% {
+    transform: rotate(45deg);
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)) drop-shadow(0 0 25px rgba(139, 38, 18, 0.4));
+  }
+
+  40% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.75)) drop-shadow(0 0 45px rgba(139, 38, 18, 0.65));
+  }
+
+  75% {
+    transform: rotate(1800deg);
+    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.95)) drop-shadow(0 0 80px rgba(139, 38, 18, 0.85));
+  }
+
+  100% {
+    transform: rotate(4320deg);
+    filter: drop-shadow(0 0 60px #D4AF37) drop-shadow(0 0 120px #8B2612) drop-shadow(0 0 180px rgba(212, 175, 55, 0.9));
+  }
+}
+
+.animate-sudarshan {
+  animation: sudarshan-spin 3.5s cubic-bezier(0.5, 0, 0.3, 1) forwards;
+}
+
+/* Custom transitions for timeline items */
+#experience .pattachitra-border-thin:hover {
+  box-shadow: 0 20px 25px -5px rgba(139, 38, 18, 0.15), 0 10px 10px -5px rgba(139, 38, 18, 0.1);
+  border-color: #D4AF37;
+}
+
+/* Fix spacing and centering */
+.pattachitra-border,
+.pattachitra-border-thin {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heritage Frame Overlay Style */
+.heritage-frame-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13.5% 13.5% 13.5% 13.5%;
+  /* Dynamic padding to fit the cutout center of the frame */
+  background: #FAF6F0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.heritage-frame-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: fill;
+  z-index: 20;
+}
+
+/* Video Preview Hover - Play Icon Reveal */
+.project-video-wrapper:hover .video-play-hint {
+  opacity: 1 !important;
+}
+
+.project-video-wrapper:hover .project-card-video {
+  opacity: 1 !important;
+}
+
+/* Video Modal - Smooth transition */
+#video-modal {
+  transition: opacity 0.35s ease;
+}
+
+/* Devotional-styled name (hero) */
+.devotional-name {
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45), 0 0 10px rgba(212, 175, 55, 0.15);
+  letter-spacing: 0.02em;
+}
+
+.devotional-name svg {
+  transform: translateY(-2px);
+}
+
+/* Small helper to reduce contrast on very large displays */
+.devotional-name span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LORD JAGANNATH IDOL — Eye-Tracking + Chatbot Widget
+   ═══════════════════════════════════════════════════════════ */
+
+.jagannath-idol-container {
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+/* Floating BGM Toggle Button */
+.bgm-toggle-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(43, 39, 36, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(212, 175, 55, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-right: 32px; /* Offset to center relative to the 100px wide avatar button */
+  position: relative;
+  z-index: 50;
+}
+
+.bgm-toggle-btn:hover {
+  transform: scale(1.1);
+  background: rgba(43, 39, 36, 0.95);
+  border-color: #D4AF37;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.bgm-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+/* Diagonal Mute Strike Line */
+.bgm-mute-line {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #8B2612;
+  transform: rotate(45deg);
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.bgm-toggle-btn.muted .bgm-mute-line {
+  opacity: 1;
+}
+
+.bgm-toggle-btn.muted svg {
+  opacity: 0.55;
+}
+
+
+/* The Jagannath CSS button */
+.jagannath-css-btn {
+  width: 120px;
+  height: 140px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 165, 0, 0.3));
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+}
+
+.jagannath-css-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.8));
+}
+
+.jagannath-css-btn:active {
+  transform: scale(0.97);
+}
+
+/* The Black Wooden Face */
+.face {
+  width: 100px;
+  height: 100px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.9), inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+  border: 3px solid #FFD700;
+}
+
+/* The Iconic Eyes */
+.eye {
+  width: 38px;
+  height: 38px;
+  background: radial-gradient(circle, transparent 22%, #D32F2F 25%, #D32F2F 40%, #FFF 43%);
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.eye.left {
+  left: 7px;
+}
+
+.eye.right {
+  right: 7px;
+}
+
+/* Trackable pupil inside each eye */
+.pupil {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+/* The Red Smile */
+.smile {
+  width: 50px;
+  height: 20px;
+  border-bottom: 5px solid #D32F2F;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* The Forehead Mark */
+.tilak {
+  width: 6px;
+  height: 18px;
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  position: absolute;
+  top: 5px;
+  left: 47px;
+  border-radius: 3px;
+}
+
+/* The Crown (Mukuta) */
+.mukuta {
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(135deg, #FFDF00, #D4AF37, #996515);
+  clip-path: polygon(10% 100%, 0 0, 25% 40%, 50% 0, 75% 40%, 100% 0, 90% 100%);
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: -1;
+}
+
+/* Chat hint label */
+.jagannath-chat-hint {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: #D4AF37;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: -2px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.jagannath-idol-btn:hover .jagannath-chat-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active state when chat is open */
+.jagannath-idol-container.chat-active .jagannath-idol-btn {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.7)) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+}
+
+/* ── Chat Panel ── */
+.jagannath-chat-panel {
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+  width: 340px;
+  max-height: 480px;
+  background: rgba(43, 39, 36, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px 16px 4px 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+.jagannath-chat-panel.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.jag-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(139, 38, 18, 0.3);
+  background: rgba(139, 38, 18, 0.15);
+}
+
+/* Quick question chips */
+.jag-quick-chips {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.jag-quick-chip {
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.jag-quick-chip:hover {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #D4AF37;
+  color: #FAF6F0;
+}
+
+/* Messages area */
+.jag-chat-messages {
+  flex: 1;
+  padding: 12px 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 180px;
+  max-height: 280px;
+  scrollbar-width: thin;
+  scrollbar-color: #8B2612 transparent;
+}
+
+.jag-chat-messages::-webkit-scrollbar {
+  width: 4px;
+}
+
+.jag-chat-messages::-webkit-scrollbar-thumb {
+  background: #8B2612;
+  border-radius: 2px;
+}
+
+/* Message bubbles */
+.jag-chat-message {
+  max-width: 88%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  animation: chatMsgFadeIn 0.3s ease forwards;
+}
+
+@keyframes chatMsgFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jag-chat-bot {
+  align-self: flex-start;
+  background: rgba(139, 38, 18, 0.2);
+  color: #FAF6F0;
+  border: 1px solid rgba(139, 38, 18, 0.3);
+  border-bottom-left-radius: 4px;
+}
+
+.jag-chat-user {
+  align-self: flex-end;
+  background: rgba(212, 175, 55, 0.15);
+  color: #FAF6F0;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom-right-radius: 4px;
+}
+
+/* Typing dots animation */
+.jag-typing-dots span {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #D4AF37;
+  animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.jag-typing-dots span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.jag-typing-dots span:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes typingBounce {
+
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Input area */
+.jag-chat-input-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(139, 38, 18, 0.3);
+  background: rgba(26, 21, 18, 0.5);
+}
+
+.jag-chat-input-field {
+  flex: 1;
+  background: rgba(250, 246, 240, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: #FAF6F0;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.jag-chat-input-field::placeholder {
+  color: rgba(250, 246, 240, 0.35);
+  font-style: italic;
+}
+
+.jag-chat-input-field:focus {
+  border-color: #D4AF37;
+  background: rgba(250, 246, 240, 0.12);
+}
+
+.jag-chat-send-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: #8B2612;
+  color: #FAF6F0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.jag-chat-send-btn:hover {
+  background: #D4AF37;
+  color: #1a1512;
+  transform: scale(1.05);
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 480px) {
+  .jagannath-chat-panel {
+    width: calc(100vw - 32px);
+    right: -8px;
+    bottom: 110px;
+    max-height: 420px;
+  }
+
+  .jagannath-idol-btn {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* GitHub contributions block styling */
+#github-contributions {
+  padding: 8px 16px;
+}
+
+#github-contributions img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  background: #FAF6F0;
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  #github-contributions .max-w-\[720px\] {
+    max-width: 100%;
+  }
+}
