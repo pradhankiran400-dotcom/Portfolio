@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiran Kumar Pradhan - Resume</title>
+  <!-- Google Fonts for professional typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Styling variables and resets */
+    :root {
+      --color-text-main: #2b2724; /* Deep charcoal */
+      --color-text-light: #5a5450;
+      --color-accent: #8b2612;     /* Laterite red matching website */
+      --color-divider: #e2dcd5;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-main);
+      background-color: #fff;
+      line-height: 1.4;
+      font-size: 11px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Page-budget and print layout rules */
+    @page {
+      size: A4;
+      margin: 0.4in 0.45in;
+    }
+
+    .resume-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header styling */
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .header h1 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-accent);
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .header h2 {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-light);
+      margin-bottom: 6px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      font-size: 10px;
+      color: var(--color-text-light);
+    }
+
+    .contact-info a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-info a:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+
+    .contact-separator {
+      color: var(--color-divider);
+    }
+
+    /* Section structures */
+    .section {
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--color-accent);
+      border-bottom: 1.5px solid var(--color-accent);
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+
+    /* Grid structures for list items */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .item-subtitle {
+      font-style: italic;
+      color: var(--color-text-light);
+    }
+
+    .item-date {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--color-text-light);
+    }
+
+    .experience-item, .project-item {
+      margin-bottom: 6px;
+    }
+
+    .experience-item:last-child, .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* List styling */
+    ul {
+      list-style-type: square;
+      padding-left: 14px;
+      margin-top: 2px;
+    }
+
+    li {
+      margin-bottom: 1.5px;
+      color: var(--color-text-main);
+      font-size: 10.5px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 15px;
+    }
+
+    .skill-category {
+      font-size: 10.5px;
+    }
+
+    .skill-category strong {
+      color: var(--color-accent);
+    }
+
+    /* Certifications List */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px 15px;
+    }
+
+    .cert-item {
+      font-size: 10px;
+    }
+
+    .cert-item strong {
+      font-weight: 600;
+    }
+
+    /* Media prints settings */
+    @media print {
+      body {
+        background-color: #fff;
+        color: #000;
+      }
+      .contact-info a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="resume-container">
+  
+  <!-- Header Section -->
+  <div class="header">
+    <h1>KIRAN KUMAR PRADHAN</h1>
+    <h2>AI & Data Science | B.Tech Undergraduate at NIT Rourkela</h2>
+    <div class="contact-info">
+      <span>Brahmapur, Odisha, India</span>
+      <span class="contact-separator">|</span>
+      <a href="mailto:pradhankiran400@gmail.com">pradhankiran400@gmail.com</a>
+      <span class="contact-separator">|</span>
+      <a href="https://linkedin.com/in/kiran-kumar-pradhan-b65198369" target="_blank">linkedin.com/in/kiran-kumar-pradhan-b65198369</a>
+      <span class="contact-separator">|</span>
+      <a href="https://github.com/pradhankiran400-dotcom" target="_blank">github.com/pradhankiran400-dotcom</a>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="item-header">
+      <span class="item-title">National Institute of Technology Rourkela (NITR)</span>
+      <span class="item-date">Aug 2025 — Aug 2029</span>
+    </div>
+    <div class="item-header">
+      <span class="item-subtitle">Bachelor of Technology (B.Tech) — Industrial Design</span>
+      <span class="item-date">CGPA: 8.53</span>
+    </div>
+  </div>
+
+  <!-- Work Experience Section -->
+  <div class="section">
+    <div class="section-title">Experience</div>
+    
+    <div class="experience-item">
+      <div class="item-header">
+        <span class="item-title">ML Developer</span>
+        <span class="item-date">Oct 2025 — Present</span>
+      </div>
+      <div class="item-subtitle">Machine Learning for Everyone (ML4E)</div>
+      <ul>
+        <li>Specialize in designing and training Machine Learning and Deep Learning models from scratch.</li>
+        <li>Engineer robust model components and run hyperparameter tuning experiments to optimize model latency and accuracy.</li>
+        <li>Collaborate with developers to explore new methods in model optimization and deployment pipeline architectures.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="item-header">
+        <span class="item-title">AI/ML Team Member</span>
+        <span class="item-date">Nov 2025 — Present</span>
+      </div>
+      <div class="item-subtitle">WEBWIZ, NIT Rourkela (WEBWIZ.NITR)</div>
+      <ul>
+        <li>Develop predictive Machine Learning models and clean/preprocess high-dimensionality structured and unstructured datasets.</li>
+        <li>Generate visual insights and dashboards using Python, NumPy, Pandas, and Matplotlib.</li>
+        <li>Contribute to club projects that bridge web-app technologies with intelligent machine learning backends.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Key Projects Section -->
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span class="item-title">Indian Constituent AI</span>
+        <span class="item-date">FastAPI, LlamaIndex, Groq API, HuggingFace</span>
+      </div>
+      <ul>
+        <li>Built a GovTech conversational assistant using Retrieval-Augmented Generation (RAG) to dynamically query the Indian Constitution.</li>
+        <li>Implemented LlamaIndex with the Groq (Llama-3.3-70b-versatile) engine and HuggingFace embeddings for sub-second semantic search response times.</li>
+        <li>Developed a lightweight and responsive web user interface connected to a FastAPI backend.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span class="item-title">AI Career Path Recommender</span>
+        <span class="item-date">FastAPI, Groq API, Tavily Search, PyPDF</span>
+      </div>
+      <ul>
+        <li>Developed an agentic EdTech recommendation tool that parses resume files and maps tailored career roadmaps.</li>
+        <li>Leveraged Llama 3 (via Groq API) combined with Tavily Search API to integrate real-time industry demand data.</li>
+        <li>Structured backends using FastAPI, extracting content from multi-format PDFs and rendering interactive Jinja2 templates.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span class="item-title">Book Recommendation System</span>
+        <span class="item-date">FastAPI, Pandas, Jinja2, Uvicorn</span>
+      </div>
+      <ul>
+        <li>Designed a collaborative and content-based recommendation engine for books using large Kaggle datasets.</li>
+        <li>Managed data preprocessing pipelines and model serialization using Pandas and Pickle.</li>
+        <li>Created a clean user interface with Jinja2 and served the system as a scalable FastAPI application.</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="item-header">
+        <span class="item-title">Spam Classifier Website</span>
+        <span class="item-date">Scikit-Learn, NLTK, Streamlit, Python</span>
+      </div>
+      <ul>
+        <li>Created an NLP classification application using NLTK for text tokenization and TF-IDF Vectorizer for feature extraction.</li>
+        <li>Trained a Multinomial Naive Bayes model to detect spam messages with high precision.</li>
+        <li>Deployed the solution in a responsive, interactive Streamlit frontend for user accessibility.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technical Skills Section -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>Languages:</strong> Python, SQL, JavaScript, HTML5, CSS3</div>
+      <div class="skill-category"><strong>Generative AI & LLMs:</strong> RAG, LlamaIndex, LangChain, Groq API, HuggingFace Embeddings</div>
+      <div class="skill-category"><strong>Machine Learning:</strong> Scikit-Learn, Naive Bayes, Cosine Similarity, Data Preprocessing</div>
+      <div class="skill-category"><strong>Data Science:</strong> Pandas, NumPy, Matplotlib, WordCloud, Data Visualization</div>
+      <div class="skill-category"><strong>Backend & Tools:</strong> FastAPI, Streamlit, Git, GitHub, Uvicorn, Jinja2 Templates</div>
+    </div>
+  </div>
+
+  <!-- Certifications Section -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <div class="cert-grid">
+      <div class="cert-item">🏆 <strong>Kaggle Dataset Creator Badge</strong> — Indian Universities Directory</div>
+      <div class="cert-item">🎓 <strong>A Primer to Deep Learning</strong> — National Institute of Technology Rourkela</div>
+      <div class="cert-item">⚡ <strong>Python for Data Science</strong> — Simplilearn Professional Certificate</div>
+      <div class="cert-item">💡 <strong>Intro to Machine Learning</strong> — Kaggle Certificate of Completion</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
