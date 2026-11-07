@@ -970,12 +970,16 @@ document.addEventListener('DOMContentLoaded', () => {
         response: "🎓 Kiran is pursuing B.Tech in Industrial Design at NIT Rourkela, batch 2025–2029. His current CGPA is 8.53!"
       },
       skills: {
-        keywords: ['skill', 'technology', 'tech stack', 'programming', 'language', 'tools', 'know', 'expertise'],
-        response: "💻 Kiran's core skills:\n• Python\n• Machine Learning & Deep Learning\n• GenAI (LLMs, RAG, LangChain)\n• Backend Development (FastAPI)\n• Pandas, NumPy, Matplotlib\n• NLP: NLTK, Scikit-Learn\n• Streamlit, LlamaIndex"
+        keywords: ['skill', 'technology', 'tech stack', 'programming', 'language', 'tools', 'know', 'expertise', 'langchain', 'langgraph'],
+        response: "💻 Kiran's core skills:\n• Python\n• Machine Learning & Deep Learning\n• GenAI (LLMs, RAG, LangChain, LangGraph)\n• LangChain & LangGraph (Agentic AI)\n• Backend Development (FastAPI)\n• Pandas, NumPy, Matplotlib\n• NLP: NLTK, Scikit-Learn\n• Streamlit, LlamaIndex"
       },
       projects: {
         keywords: ['project', 'work', 'built', 'portfolio', 'created', 'developed'],
-        response: "🚀 Kiran has built 7 projects:\n1. Book Recommendation System\n2. AI Career Path Recommendor\n3. Spam Classifier Website\n4. Indian Constituent AI\n5. LangChain Chatbot\n6. Movie Recommendor Analyzer\n7. WhatsApp Chat Analyzer\n\nAsk about any specific project!"
+        response: "🚀 Kiran has built 8 projects:\n1. Cosmopolitan Fest AI Chatbot (Live at cosmonitrkl.live)\n2. Book Recommendation System\n3. AI Career Path Recommendor\n4. Spam Classifier Website\n5. Indian Constituent AI\n6. LangChain Chatbot\n7. Movie Recommendor Analyzer\n8. WhatsApp Chat Analyzer\n\nAsk about any specific project!"
+      },
+      cosmopolitan: {
+        keywords: ['cosmo', 'cosmopolitan', 'webwiz', 'fest', 'fest chatbot', 'cosmonitrkl'],
+        response: "🎉 Cosmopolitan Fest AI Chatbot is an official project developed for Webwiz NITRKL for the Cosmopolitan Multi-Ethnic Fest! It is live on cosmonitrkl.live, assisting visitors with event queries, guest lineups, and fest schedules in real time. 🚀"
       },
       book_recommender: {
         keywords: ['book recommend', 'book system'],
@@ -1007,11 +1011,15 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       experience: {
         keywords: ['experience', 'work', 'job', 'intern', 'ml4e', 'webwiz', 'club'],
-        response: "💼 Kiran's roles:\n1. ML Developer at ML4E — ML/DL model engineering\n2. AI/ML Member at WEBWIZ.NITR — data visualizations with Python"
+        response: "💼 Kiran's roles:\n1. ML Developer at ML4E — ML/DL model engineering\n2. AI/ML Member at WEBWIZ.NITR — engineered the official Cosmopolitan Fest chatbot (cosmonitrkl.live) & data visualizations with Python"
       },
       certifications: {
-        keywords: ['certif', 'badge', 'course', 'kaggle', 'simplilearn'],
-        response: "🏅 Certifications:\n1. Kaggle Dataset Creator Badge\n2. A Primer to Deep Learning — NIT Rourkela\n3. Python For Data Science — Simplilearn\n4. Intro to Machine Learning — Kaggle"
+        keywords: ['certif', 'badge', 'course', 'kaggle', 'simplilearn', 'integral', 'stemvibe', 'jane street'],
+        response: "🏅 Certifications & Achievements:\n1. The Integral Cup 2026 (Season 2) — Jane Street & STEMvibe\n2. Kaggle Dataset Creator Badge\n3. A Primer to Deep Learning — NIT Rourkela\n4. Python For Data Science — Simplilearn\n5. Intro to Machine Learning — Kaggle"
+      },
+      integral_cup: {
+        keywords: ['integral', 'integral cup', 'jane street', 'stemvibe', 'delhivery'],
+        response: "🏆 The Integral Cup 2026 (Season 2) — Kiran competed in Round 1 across four distinct tracks in this national competition organized by STEMvibe Foundation and sponsored by Jane Street & Delhivery!"
       },
       contact: {
         keywords: ['contact', 'connect', 'reach', 'email', 'github', 'linkedin', 'social'],
@@ -1026,8 +1034,8 @@ document.addEventListener('DOMContentLoaded', () => {
         response: "🙏 I am Lord Jagannath — the Lord of the Universe! My eyes see everything, and right now, they're following your cursor! 👀✨"
       },
       ai_ml: {
-        keywords: ['machine learning', 'deep learning', 'artificial intelligence', 'genai', 'llm', 'rag'],
-        response: "🧠 Kiran focuses on:\n• Machine Learning — Scikit-Learn\n• Deep Learning — Neural networks, NLP\n• GenAI — LLMs, RAG, LangChain, LlamaIndex\n• Backend — FastAPI"
+        keywords: ['machine learning', 'deep learning', 'artificial intelligence', 'genai', 'llm', 'rag', 'langchain', 'langgraph'],
+        response: "🧠 Kiran focuses on:\n• Machine Learning — Scikit-Learn\n• Deep Learning — Neural networks, NLP\n• GenAI & Agentic AI — LLMs, LangChain, LangGraph, RAG, LlamaIndex\n• Backend — FastAPI"
       },
       fallback: {
         response: "🤔 Hmm, I'm not sure about that! Try asking about Kiran's projects, skills, education, experience, or certifications. 🙏"
